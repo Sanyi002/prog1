@@ -7,7 +7,7 @@ import time
 walk_dir = sys.argv[1]
 
 walk_dir = os.path.abspath(walk_dir)
-all_point = 0
+sum_point = 0
 
 filename = time.strftime('%Y-%m-%d') + 'FUTURE_points_log'
 sys.stdout = open(filename, 'w')
@@ -24,12 +24,12 @@ for root, subdirs, files in os.walk(walk_dir):
                 line = line.strip()           
                 part_point += int(re.sub('.*?([0-9]*)$', r'\1', line))
             print('Részpontszám: ', part_point, '\n')
-        all_point += part_point
+        sum_point += part_point
 
 for i in range(80):
     print('*', end="")        
 
-print('\nÖsszes pont: ', all_point, '\n')
+print('\nÖsszpont: ', sum_point, '\n')
 
 os.close(1)
 
