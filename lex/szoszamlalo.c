@@ -1,5 +1,3 @@
-/*Kistamás Dávid GNH2NV  csop: csüt. 16-18h*/
-
 %{
 	#include <stdio.h>
 	#include <string.h>
