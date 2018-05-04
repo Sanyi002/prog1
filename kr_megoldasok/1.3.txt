@@ -1,0 +1,25 @@
+*** 1.3.c progi ellenőrzése splintel ***
+
+futtatás  :  /source/tankonyvi/KR$ splint 1.3.c
+
+futás eredménye:
+
+Splint 3.1.2 --- 03 May 2009
+
+1.3.c: (in function main)
+1.3.c:13:1: Assignment of int to float: fahr = also
+  To allow all numeric types to match, use +relaxtypes.
+1.3.c:15:7: Operands of <= have incompatible types (float, int): fahr <= felso
+1.3.c:16:2: Assignment of double to float:
+               celsius = (5.0 / 9.0) * (fahr - 32.0)
+
+Finished checking --- 3 code warnings
+
+Hogyha a double -ként deklaráljuk a változóinkat, az megoldja a problémát : 
+
+	../source/tankonyvi/KR$ splint 1.3.c
+
+Splint 3.1.2 --- 03 May 2009
+
+Finished checking --- no warnings
+
